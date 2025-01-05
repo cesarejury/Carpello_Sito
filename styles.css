@@ -118,8 +118,11 @@ main {
 
 .carousel .slide img {
     width: 100%;
-    max-height: 100px; /* Limite massimo dell'altezza dell'immagine */
+    max-height: 600px; /* Limite massimo dell'altezza dell'immagine */
     object-fit: cover; /* Adatta l'immagine mantenendo le proporzioni */
+    margin: 0; /* Rimuove i margini */
+    padding: 0; /* Rimuove i padding */
+    border: none; /* Rimuove eventuali bordi */
 }
 
 .navigation {
