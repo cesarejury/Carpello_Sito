@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - Carpello</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CARPELLO</h1>
+        <button class="menu-button" aria-label="Toggle menu" onclick="toggleMenu()"></button>
+        <nav class="menu" role="navigation">
+            <a href="Carpello_home.html">Home</a>
+            <a href="chi-siamo.html">Chi Siamo</a>
+            <a href="Carpello_prodotti.html">Prodotti</a>
+            <a href="Carpello_contatti.html">Contatti</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <h2>Contatti</h2>
+            <p><strong>Carpello</strong> è un Marchio dell'Azienda Agricola Silla Cesare Jury.</p>
+            <p>Ci trovi a Foligno in Vocabolo San Bartolomeo 1.</p>
+            <p><strong>P.IVA:</strong> 0001110001</p>
+            <p><strong>Telefono:</strong> <a href="tel:+393473098475">347 309 8475</a></p>
+        </section>
+
+        <section class="map">
+            <h2>Dove Siamo</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3042.7437858436764!2d12.699698215686842!3d42.957145079151246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132e9ccf3c2b2bfd%3A0xb1e31b2e5e2f1d1a!2sVocabolo%20San%20Bartolomeo%2C%201%2C%2060605%20Foligno%20PG%2C%20Italy!5e0!3m2!1sen!2sus!4v1606928332746!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+        <footer class="footer">
+            <p>&copy; 2025 Carpello - Azienda Agricola Silla Cesare Jury. Tutti i diritti riservati.</p>
+        </footer>
+</body>
+</html>

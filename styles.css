@@ -1,0 +1,154 @@
+body {
+    font-family: "Palatino Linotype", "Book Antiqua", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #faf6e9;
+    color: #4b4e3d;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #556b2f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+}
+
+.menu-button:before,
+.menu-button:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+}
+
+.menu-button:before {
+    top: 8px;
+}
+
+.menu-button:after {
+    top: 18px;
+    box-shadow: 0 10px 0 white;
+}
+
+.menu {
+    display: none;
+    background-color: #a9ba9d;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border: 1px solid #556b2f;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #4b4e3d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background-color: #6b8e23;
+    color: white;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.intro strong {
+    font-size: 1.3em;
+}
+
+/* Stili per il carosello nella pagina home */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel .slide img {
+    width: 100%;
+    max-height: 400px; /* Limite massimo dell'altezza dell'immagine */
+    object-fit: cover; /* Adatta l'immagine mantenendo le proporzioni */
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.navigation button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.navigation button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.footer {
+    background-color: #556b2f;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-shrink: 0;
+}

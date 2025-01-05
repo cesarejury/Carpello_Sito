@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodotti - Carpello Azienda Agricola</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CARPELLO</h1>
+        <button class="menu-button" aria-label="Toggle menu" onclick="toggleMenu()"></button>
+        <nav class="menu" role="navigation">
+            <a href="Carpello_home.html">Home</a>
+            <a href="chi-siamo.html">Chi Siamo</a>
+            <a href="Carpello_prodotti.html">Prodotti</a>
+            <a href="Carpello_contatti.html">Contatti</a>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>I Nostri Prodotti</h2>
+            <p><strong>Un olio extra vergine di oliva prodotto con passione nel cuore delle colline umbre tra Spoleto e Assisi.</strong> Ottenuto da una sapiente miscela di olive <strong>Moraiolo</strong>, <strong>Leccino</strong> e <strong>Frantoiano</strong>, cultivar tipiche del territorio, che conferiscono all'olio un profilo aromatico unico. Le olive vengono coltivate con cura nei nostri uliveti situati nella suggestiva fascia olivata collinare tra Spoleto e Assisi, un territorio vocato alla produzione di olio di eccellenza. Le olive vengono raccolte a mano al giusto grado di maturazione e frante entro poche ore, per preservarne al meglio le proprietà organolettiche e nutrizionali. Una produzione limitata e curata in ogni dettaglio, per garantire un olio extra vergine di oliva di altissima qualità.
+            </p>
+        </section>
+        <section class="prodotto">
+            <h3>Lattina di Olio Extra Vergine di Oliva</h3>
+            <div class="prodotto-content">
+                <img src="path/to/lattina.jpg" alt="Lattina di Olio Extra Vergine di Oliva">
+                <div class="prodotto-details">
+                    <p>La nostra lattina di olio extra vergine di oliva è disponibile in diversi formati per soddisfare tutte le esigenze. Ogni lattina contiene olio di altissima qualità, prodotto con olive selezionate e lavorate con cura.</p>
+                    <div class="prodotto-purchase">
+                        <span class="price">80 €</span>
+                        <label for="quantity-lattina">Quantità:</label>
+                        <input type="number" id="quantity-lattina" name="quantity-lattina" min="1" value="1">
+                        <button onclick="showOrderForm('Lattina di Olio Extra Vergine di Oliva', '80.00')">Aggiungi al Carrello</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="prodotto">
+            <h3>Bottiglia da 0,75 Litri di Olio Extra Vergine di Oliva</h3>
+            <div class="prodotto-content">
+                <img src="Foto Bottiglia.jpg" alt="Bottiglia da 0,75 Litri di Olio Extra Vergine di Oliva">
+                <div class="prodotto-details">
+                    <p>La nostra bottiglia da 0,75 litri è perfetta per chi cerca un olio extra vergine di oliva di alta qualità in un formato elegante e pratico. Ideale per l'uso quotidiano o come regalo speciale.</p>
+                    <div class="prodotto-purchase">
+                        <span class="price">80 €</span>
+                        <label for="quantity-bottiglia">Quantità:</label>
+                        <input type="number" id="quantity-bottiglia" name="quantity-bottiglia" min="1" value="1">
+                        <button onclick="showOrderForm('Bottiglia da 0,75 Litri di Olio Extra Vergine di Oliva', '80.00')">Aggiungi al Carrello</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="order-form" style="display: none;">
+            <h3>Effettua il tuo Ordine</h3>
+            <form onsubmit="submitOrder(event)">
+                <input type="hidden" id="product-name" name="product-name">
+                <input type="hidden" id="product-price" name="product-price">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="address">Indirizzo:</label>
+                <input type="text" id="address" name="address" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Telefono:</label>
+                <input type="tel" id="phone" name="phone" required>
+                <button type="submit">Invia Ordine</button>
+            </form>
+            <div id="bank-details" style="margin-top: 20px;">
+                <h4>Dettagli per il Bonifico Bancario</h4>
+                <p>Intestatario: Carpello Azienda Agricola</p>
+                <p>IBAN: IT60X0542811101000000123456</p>
+                <p>Banca: Banca Agricola Popolare di Ragusa</p>
+                <p>Causale: Acquisto [Nome Prodotto] - [Nome Cliente]</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Carpello - Azienda Agricola Silla Cesare Jury. Tutti i diritti riservati.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function showOrderForm(productName, productPrice) {
+            document.getElementById('product-name').value = productName;
+            document.getElementById('product-price').value = productPrice;
+            document.getElementById('order-form').style.display = 'block';
+        }
+
+        function submitOrder(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const productName = document.getElementById('product-name').value;
+            const productPrice = document.getElementById('product-price').value;
+
+            alert(`Ordine ricevuto!\n\nProdotto: ${productName}\nPrezzo: €${productPrice}\n\nNome: ${name}\nIndirizzo: ${address}\nEmail: ${email}\nTelefono: ${phone}`);
+
+            // Inviare i dati dell'ordine a un server o email per la gestione dell'ordine.
+        }
+    </script>
+</body>
+</html>
