@@ -137,16 +137,19 @@ main {
 }
 
 .navigation button {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent; /* Rimuove lo sfondo */
     border: none;
     color: white;
-    font-size: 2em;
-    padding: 10px;
+    font-size: 1.5em; /* Riduce la dimensione del carattere */
+    padding: 5px; /* Riduce il padding */
     cursor: pointer;
+    border-radius: 50%; /* Aggiunge bordi arrotondati */
+    background-color: rgba(0, 0, 0, 0.3); /* Aggiunge un leggero sfondo trasparente */
+    transition: background-color 0.3s ease; /* Aggiunge una transizione */
 }
 
 .navigation button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5); /* Cambia il colore di sfondo al passaggio del mouse */
 }
 
 .footer {
