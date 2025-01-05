@@ -118,7 +118,7 @@ main {
 
 .carousel .slide img {
     width: 100%;
-    max-height: 400px; /* Limite massimo dell'altezza dell'immagine */
+    max-height: 600px; /* Limite massimo dell'altezza dell'immagine */
     object-fit: cover; /* Adatta l'immagine mantenendo le proporzioni */
 }
 
