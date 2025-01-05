@@ -102,29 +102,29 @@ main {
 .carousel {
     position: relative;
     max-width: 100%;
-    margin: 0;
+    margin: 0 auto;
     overflow: hidden;
 }
 
 .carousel .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-     height: 100%;
+    height: 100%;
 }
 
 .carousel .slide {
     min-width: 100%;
     box-sizing: border-box;
-     height: 100%;
+    height: 100%;
 }
 
 .carousel .slide img {
     width: 100%;
-    max-height: 600px; /* Limite massimo dell'altezza dell'immagine */
-    object-fit: cover; /* Adatta l'immagine mantenendo le proporzioni */
-    margin: 0; /* Rimuove i margini */
-    padding: 0; /* Rimuove i padding */
-    border: none; /* Rimuove eventuali bordi */
+    max-height: 600px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 .navigation {
@@ -137,19 +137,19 @@ main {
 }
 
 .navigation button {
-    background-color: transparent; /* Rimuove lo sfondo */
+    background-color: transparent;
     border: none;
     color: white;
-    font-size: 1.5em; /* Riduce la dimensione del carattere */
-    padding: 5px; /* Riduce il padding */
+    font-size: 1.5em;
+    padding: 5px;
     cursor: pointer;
-    border-radius: 50%; /* Aggiunge bordi arrotondati */
-    background-color: rgba(0, 0, 0, 0.3); /* Aggiunge un leggero sfondo trasparente */
-    transition: background-color 0.3s ease; /* Aggiunge una transizione */
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
 }
 
 .navigation button:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Cambia il colore di sfondo al passaggio del mouse */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .footer {
