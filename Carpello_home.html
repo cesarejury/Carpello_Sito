@@ -33,45 +33,5 @@
     <footer class="footer">
         <p>&copy; 2025 Carpello - Azienda Agricola Silla Cesare Jury. Tutti i diritti riservati.</p>
     </footer>
-    <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        }
-
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel .slide');
-        const totalSlides = slides.length;
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.style.transform = `translateX(${(i - index) * 100}%)`;
-            });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            showSlide(currentSlide);
-        }
-
-        function autoSlide() {
-            nextSlide();
-            setTimeout(autoSlide, 3000);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            showSlide(currentSlide);
-            setTimeout(autoSlide, 3000);
-        });
-    </script>
 </body>
 </html>
